@@ -147,5 +147,5 @@ function gallery(){
   $('galleryExplore').onclick=()=>paperTransition(explore,'ink');$('galleryAgain').onclick=()=>{PaperMotion.stop();workshop()};
 }
 dialog.onclose=()=>last?.focus();host.querySelector('#jhome').onclick=()=>{host.querySelector('.jprogress')?.remove();cover()};function close(){PaperMotion.stop();clearTimeout(timer);if(dialog.open)dialog.close();host.hidden=true;window.onJourneyResize=null;document.body.style.overflow='';document.querySelector('#journeyBtn').focus()}host.querySelector('#jexit').onclick=close;document.addEventListener('keydown',e=>{if(!host.hidden){if(e.key==='Escape'){e.stopImmediatePropagation();if(!dialog.open){e.preventDefault();if(view==='explore')cover();else close()}}else if(!dialog.open)e.stopImmediatePropagation()}},true);window.addEventListener('resize',()=>window.onJourneyResize?.());const b=document.querySelector('#journeyBtn');b.onclick=async()=>{if(!project)return;await queue;host.hidden=false;document.body.style.overflow='hidden';cover();content.querySelector('.jenter').focus()};
-if(new URLSearchParams(location.search).get('v')==='26')setTimeout(()=>b.click(),120);
+if(new URLSearchParams(location.search).get('v')==='26')setTimeout(()=>b.click(),1800);
 })();
